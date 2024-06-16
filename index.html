@@ -3,10 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
+
+    <!--styles-->
+    <style>
+        html, body{
+            box-sizing: border-box;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        a{
+            text-decoration: none;
+            color: #366b0b;
+        }
+        main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+        }
+        #buttons{
+            margin-top: 60px;
+        }
+        .btn{
+            margin: 10px;
+            width: 120px;
+            height: 60px;
+            border-radius: 8px;
+            padding: 5px;
+        }
+        .btn:hover{
+            cursor: pointer;
+        }
+        .display{
+            font-size: 19px;
+            margin: 8px;
+        }
+        #winner-human {
+            color: green;
+        }
+        #winner-computer{
+            color: red;
+        }
+        .play-again{
+            width: 180px;
+            height: 60px;
+            border-radius: 5px;
+            padding: 5px;
+            margin-top: 50px;
+        }
+        .play-again:hover{
+            cursor: pointer;
+        }
+        footer{
+            margin-top: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30px;
+            background-color: #f1f1f1;
+        }
+    </style>
 </head>
 <body>
-    
+    <main>
+        <div id="container">
+            <h1>Rock, Paper, Scissors Game</h1>
+            <p>The Winner is First To 5 Wins</p>
+            <div id="buttons">
+                <button data-value="rock" class="btn">Rock</button>
+                <button data-value="paper" class="btn">Paper</button>
+                <button data-value="scissors" class="btn">Scissors</button>
+            </div>
+        
+            <div class= "display" id="computer-choice"></div>
+            <div class= "display" id="result">Choose Your Weapon</div>
+            <div class= "display" id="score"></div>
+            <div class="display" id="winner-human"></div>
+            <div class="display" id="winner-computer"></div>
+
+        </div>
+        <button class="play-again">Play Again</button>
+    </main>
+    <footer>
+        <small>Copyright&copy; <a href="http://x.com/ifeeee___">Ifeeee</a> 2024</small>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
