@@ -16,6 +16,7 @@ function getComputerChoice(){
 //function to get the human choice
 function getHumanChoice(e){
     let userInput = e.target.getAttribute("data-value");
+    return userInput;
 }
 
 //function to check for winner
@@ -40,7 +41,7 @@ function playRound(humanChoice, computerChoice){
             computerScore++;
             result.textContent = "You lose! Scissors cuts paper!";
         }
-    }else{
+    }else if(humanChoice === "scissors"){
         if(computerChoice === "rock"){
             computerScore++;
             result.textContent = "You lose! Rock crushes scissors!";
@@ -50,6 +51,8 @@ function playRound(humanChoice, computerChoice){
         }else{
             result.textContent = "That's a tie!";
         }
+    }else{
+        result.textContent = "Invalid input";
     }
 }
 
